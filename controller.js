@@ -21,8 +21,6 @@ function addScore() {
 
 function subScore() { score.addScore(-score.getLevel()); }
 
-function subPortal() {
-    score.addPortal(-1);
-}
+function subPortal() { score.addPortal(-1); }
 
 function availablePortals() { return score.getPortals(); }
