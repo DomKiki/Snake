@@ -175,7 +175,7 @@ var p5Game = function(p) {
     p.showWalls = function() {
         let cpt = 0;
         for (let w of walls) { 
-            p.fill(0, cpt * 10, cpt++ * 25);
+            p.fill(0);
             p.rect(w.pos.x, w.pos.y, w.size.x, w.size.y);
         }
     }
@@ -209,9 +209,9 @@ var p5Game = function(p) {
 
     /******************************* Arrays *******************************/
 
-    p.addFood = function() { food.push({ pos: p.randomPosition(), col: p.color(COLOR_FOOD) }); }
+    p.addFood = function(f) { food.push({ pos: p.randomPosition(), col: p.color(COLOR_FOOD) }); }
 
-    p.addPoison = function() { poison.push({ pos: p.randomPosition(), col: p.color(COLOR_POISON) }); }
+    p.addPoison = function(f) { poison.push({ pos: p.randomPosition(), col: p.color(COLOR_POISON) }); }
 
     p.addWall = function(s) {
 
